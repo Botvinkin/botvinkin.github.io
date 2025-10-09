@@ -55,7 +55,6 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #222;
   font-size: 1em;
   margin-right: 10px;
   white-space: nowrap;
@@ -310,7 +309,82 @@ hr.entry-divider {
     border: 1.2px solid #ccc !important;
     background: #fff !important;
   }
-}</style>
+}
+
+/* === DARK THEME === */
+
+@media (prefers-color-scheme: dark) {
+  body, .container {
+    background: #080c14 !important;
+    color: #eaf0ff !important;
+  }
+
+  /* Ensure all blocks inherit this by default */
+  section, .exp-entry, .edu-entry {
+    background: transparent !important;
+    color: inherit !important;
+  }
+
+  .skill-chip, .lang-chip {
+    color: #e3e9f7 !important;
+    background: #23262f !important;
+    border-color: #393c4a !important;
+  }
+
+  .exp-summary, .edu-degree {
+    font-weight: 400 !important;
+    color: #c9d3e8 !important; /* much brighter */
+  }
+
+  /* Fix background on any highlighted block (remove shadows/greys) */
+  .exp-role-block, .exp-summary, .chip-list, .skills-list, .skills-chip-list, .lang-chip-list {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Section headers, org names, and main titles: brighter color */
+  .resume-title, .section-header, .exp-org, .edu-institution {
+    color: #fff !important;
+  }
+
+  .edu-degree, .exp-location, .exp-dates, .edu-dates {
+    color: #b6c0de !important;
+  }
+
+  .exp-position {
+    color: #b7e1ff !important;
+  }
+
+  /* Links and icons */
+  a, .contact-icon {
+    color: #87b5ff !important;
+  }
+  a:hover, .contact-icon:hover {
+    color: #b7e1ff !important;
+  }
+
+  /* Chipped elements (skills, languages) */
+  .skill-chip, .lang-chip {
+    background: #23262f !important;
+    color: #e3e9f7 !important;
+    border: 1.2px solid #393c4a !important;
+  }
+  .skill-chip:hover, .lang-chip:hover {
+    background: #30344a !important;
+  }
+
+  /* Remove unwanted backgrounds from list */
+  .skills-list, .lang-list, ul, li {
+    background: transparent !important;
+  }
+
+  hr.section-divider {
+    border: none;
+    border-top: 3px solid #fff;
+    margin: 0 0 13px 0;
+  }
+}
+</style>
       </head>
       <body>
         <div id="root"><div class="container p-3 mx-auto lg:w-[960px] bg-color text-text print:max-w-full print:p-0 print:w-full print:px-6"><header><h1 class="resume-title">Pavel Botvinkin</h1><div class="contact-row"><span class="contact-location"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot contact-fa" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"></path></svg>Belgrade, Serbia</span><span class="contact-methods"><a href="https://linkedin.com/in/botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin contact-fa" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg> @<!-- -->botvinkin</a><a href="mailto:pavel@botvinkin.com" class="contact-icon"><svg data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"></path></svg> <!-- -->pavel@botvinkin.com</a><a href="https://t.me/pavel_botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="telegram" class="svg-inline--fa fa-telegram contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM371 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2 .5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3 .6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7 .5 3.2 .6 6.5 .4 9.8z"></path></svg> @<!-- -->pavel_botvinkin</a></span></div></header><div class="flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3"><div class="lg:w-2/3 print:w-[72%]"><section><h2 class="section-header">PROFESSIONAL SKILLS</h2><hr class="section-divider"/><ul class="skills-list"><li>Cloud-native architecture and scalable systems (microservices, high-load services)</li><li>Product and service ownership with resource and process management</li><li>Enterprise security: authorization, access control, audit logs, group policies</li><li>Agile leadership (Scrum), team mentoring, and SDLC management</li><li>Programming: Kotlin, C#</li></ul></section><section><h2 class="section-header">PROFESSIONAL EXPERIENCE</h2><hr class="section-divider"/><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Yandex</span><span class="exp-location"><span>Belgrade, Serbia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Head of Sector (Organization Management and Security Services)</em></span><span class="exp-dates">June 2024<!-- --> — <!-- -->Present</span></div><div class="exp-summary">Lead a sector of more than 20 individuals across two backend development teams. Focus areas include hiring, line management, conflict resolution, people development, and performance reviews. Successfully doubled the size of the sector in one year while ensuring strategic backend development aligned with company goals. Directly manage one team and oversee internal processes, task coordination, and guide the other teams within the sector through subordinate team leaders. Serve as a Delivery Manager for several B2B security services in Yandex 360 (&gt;100M MAU, &gt;10M DAU), including authorization and group policies management. Responsible for development processes, incident management, quarterly planning, and strategic service development. Foster effective collaboration between backend developers, QA testers, and SRE teams.</div></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Technical Architect</em></span><span class="exp-dates">March 2024<!-- --> — <!-- -->June 2024</span></div><div class="exp-summary">Expanded the functionality of the authorization service to support requirements from consumer services. Led architectural landscape updates in authorization, ensuring improved integration/alignment with company objectives.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">EPAM Systems</span><span class="exp-location"><span>Belgrade, Serbia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Solution Architect</em></span><span class="exp-dates">June 2022<!-- --> — <!-- -->March 2024</span></div><div class="exp-summary">Led the cloud reimplementation of a complex, 25-year-old monolithic authorization and license management system. Guided project from reverse-engineering to production. Defined architecture, designed infrastructure, and provided development guidance for modern scalability and performance.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Atos IT Solutions and Services</span><span class="exp-location"><span>Moscow, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Solution Architect</em></span><span class="exp-dates">November 2018<!-- --> — <!-- -->June 2022</span></div><div class="exp-summary">Reduced TCO for cloud-based solutions through architectural strategies. Led design, implementation, and support for projects in IIoT, marine, and insurance systems: industrial digitalization, system integration, hardware connectivity, data analytics.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">ITnent</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Development Team Lead</em></span><span class="exp-dates">November 2015<!-- --> — <!-- -->November 2018</span></div><div class="exp-summary">Led development of enterprise-level software projects. Contributed to data analytics systems like ReaLog, WatchCAT, MindSphere (Siemens AG). Collaborated with CERN and international teams to deliver reliable, scalable platforms.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">GLONASS-Factor</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Lead Software Engineer</em></span><span class="exp-dates">November 2012<!-- --> — <!-- -->September 2014</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Empire (Private Pension Fund)</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Engineer, IT Consultant</em></span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Volgograd State Technical University</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Lecturer at the Department of Computers and Systems</em></span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">PortaCapena</span><span class="exp-location"><span>Geel, Belgium</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Intern Software Engineer</em></span><span class="exp-dates">February 2010<!-- --> — <!-- -->September 2010</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Part-time work experience</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Engineer</em></span><span class="exp-dates">April 2008<!-- --> — <!-- -->February 2012</span></div></div></div></section><section><h2 class="section-header">HIGHER EDUCATION</h2><hr class="section-divider"/><div class="edu-entry"><div class="edu-row"><span class="edu-institution">Volgograd State Technical University</span><span class="edu-dates">September 2005<!-- --> — <!-- -->March 2015</span></div><div class="edu-degrees-list"><div class="edu-degree">PhD<!-- --> — System analysis, management and information processing</div><div class="edu-degree">Master and Bachelor of Engineering and Technology</div><div class="edu-degree">Bachelor of Management</div></div></div></section></div><div class="lg:w-1/3 print:w-[28%]"><div class="print:space-y-2"><section><h2 class="section-header">LANGUAGES</h2><hr class="section-divider"/><div class="lang-chip-list"><span class="lang-chip">Russian<span class="lang-level"> <!-- -->native (C2)</span></span><span class="lang-chip">English<span class="lang-level"> <!-- -->(C1)</span></span><span class="lang-chip">Serbian<span class="lang-level"> <!-- -->(B1)</span></span><span class="lang-chip">German<span class="lang-level"> <!-- -->(A2)</span></span></div></section></div></div></div></div></div>
