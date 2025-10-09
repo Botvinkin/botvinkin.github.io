@@ -44,14 +44,14 @@ body {
 }
 
 .contact-location .contact-fa {
-  display: inline-block;   /* or 'block', both OK */
-  width: 1em; height: 1em; /* make sure the SVG gets its sizing context */
+  display: inline-block;  
+  width: 1em; height: 1em;
   font-size: 1em;
   vertical-align: middle;
+  margin-right: -2px;
 }
 
 .contact-location {
-  /* You can keep gap if you want */
   display: flex;
   align-items: center;
   gap: 7px;
@@ -76,18 +76,18 @@ body {
   font-weight: 500;
   text-decoration: none;
   gap: 4px;
-  font-size: 1em; /* Ensures consistent inline sizing with text */
+  font-size: 1em;
 }
 
 .contact-icon .contact-fa {
-  font-size: 1em !important;    /* No giants */
+  font-size: 1em !important;
   width: 1em !important;
   height: 1em !important;
   min-width: 1em;
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.22em;
+  margin-right: 0px;
 }
 
 .contact-icon:hover {
@@ -98,7 +98,7 @@ body {
 /* === SECTION HEADERS & DIVIDERS === */
 
 .section-header {
-  margin: 36px 0 7px 0;
+  margin: 36px 0 0 0;
   font-size: 1.11em;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 700;
@@ -113,141 +113,90 @@ hr.section-divider {
   margin: 0 0 13px 0;
 }
 
-hr.entry-divider {
-  border: none;
-  border-top: 1.5px solid #dedede;
-  margin: 20px 0 0 0;
+/* === PROFESSIONAL SKILLS === */
+
+.skills-list {
+  margin: 0 0 12px 0;
+  padding-left: 22px;
 }
 
-/* === PROFESSIONAL SKILLS: CHIPS === */
-
-.skills-chips-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skills-chip-group {
-  margin-bottom: 0.3em;
-}
-
-.skills-chip-group-title {
-  font-size: 1em;
-  font-weight: 600;
-  margin-bottom: 5px;
-  margin-top: 8px;
-}
-
-.skills-chip-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-chip {
-  display: inline-block;
-  background: #e7e9ed;
-  color: #444;
-  font-size: 0.97em;
-  font-family: inherit;
-  border-radius: 16px;
-  padding: 3.5px 13px;
-  margin-bottom: 4px;
-  line-height: 1.7;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(40,48,50,0.04);
-  border: 1.2px solid #e0e2e6;
-  letter-spacing: 0.01em;
-  transition: background 0.15s;
-}
-
-.skill-chip:hover {
-  background: #d3d6db;
+.skills-list li {
+  margin-bottom: 0.04em;
+  line-height: 1.27;
+  font-size: inherit;
+  color: inherit;
 }
 
 /* === EXPERIENCE (PROFESSIONAL EXPERIENCE) === */
-
-.exp-entry { margin-bottom: 0; }
 
 .exp-header-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 10px;
+  font-size: 1.10em;
+  margin-bottom: 2px;
 }
 
 .exp-org {
   font-weight: 700;
+  color: #1d232a;
   font-size: 1.09em;
-  letter-spacing: 0.01em;
-  color: #15223a;
-}
-
-.exp-locdate {
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
-  flex-wrap: wrap;
 }
 
 .exp-location {
-  font-size: 1em;
-  color: #222;
   font-weight: 400;
-  margin-left: 8px;
+  color: #444;
+  font-size: 0.97em;
 }
 
-.exp-dates {
-  font-size: 1em;
-  font-weight: 700;
-  color: #222;
-  white-space: nowrap;
-}
-
-.exp-company-roles {
-  margin-top: 6px;
+.exp-role-block {
   margin-bottom: 14px;
 }
 
-.exp-role {
-  margin-bottom: 10px;
+.exp-position-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-.exp-role:last-child {
-  margin-bottom: 0;
-}
-
-/* Position: italic, strong, readable */
 
 .exp-position {
   font-style: italic;
-  font-weight: 600;
-  font-size: 1.09em;
-  color: #1b2941;
-  margin-bottom: 2px;
-  margin-top: 2px;
+  font-weight: 500;
+  font-size: 1.08em;
+  color: #17386b;
 }
 
-/* Role Dates: lighter, smaller */
-
-.exp-role-dates {
+.exp-dates {
+  font-size: 0.97em;
+  color: #444;
+  margin-left: 15px;
+  font-weight: 400;
   font-style: normal;
-  color: #666;
-  font-size: 0.98em;
-  margin-left: 2px;
+  text-align: right;
+  white-space: nowrap;
 }
-
-/* Summary: lighter, distinct */
 
 .exp-summary {
   font-size: 1.00em;
   font-weight: 400;
   color: #444;
-  line-height: 1.55;
-  margin-left: 0;
-  margin-top: 1.5px;
+  margin-top: 5px;
   margin-bottom: 0.2em;
+  line-height: 1.55;
+}
+
+hr.entry-divider {
+  border: none;
+  border-top: 1.5px solid #dedede;
+  margin: 26px 0 0 0;
+}
+
+.exp-entry {
+  margin-bottom: 26px;
+}
+
+.exp-entry:last-child {
+  margin-bottom: 0;
 }
 
 /* === EDUCATION === */
@@ -294,28 +243,31 @@ hr.entry-divider {
 
 /* === LANGUAGES === */
 
-.lang-list {
-  margin: 0 0 5px 0;
-  padding-left: 0;
-  list-style: none;
+.lang-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-.lang-item {
-  font-size: 1.07em;
-  color: #20232a;
-  margin-bottom: 2.5px;
+.lang-chip {
+  background: #f0f1f4;
+  border-radius: 16px;
+  padding: 3px 13px;
+  margin-bottom: 4px;
+  font-size: 0.97em;
+  font-weight: 500;
+  color: #304060;
+  display: inline-block;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  border: 1.2px solid #e0e2e6;
+  box-shadow: 0 1px 2px rgba(40,48,50,0.04);
+  transition: background 0.15s;
 }
 
-.lang-label {
-  font-weight: 600;
-  color: #17386b;
-}
-
-.lang-fluency {
-  font-weight: 400;
-  color: #555;
-  font-style: italic;
-  margin-left: 4px;
+.lang-chip:hover {
+  background: #d3d6db;
 }
 
 /* === MOBILE RESPONSIVE TWEAKS === */
@@ -331,9 +283,36 @@ hr.entry-divider {
   .contact-methods { gap: 14px; }
   .exp-header-row, .edu-row { flex-direction: column; align-items: flex-start; }
 }
-</style>
+
+/* === PRINTING === */
+
+@media print {
+  @page {
+    margin: 15mm 5mm 15mm 10mm;
+  }
+
+  body, html {
+    background: #fff !important;
+  }
+  .container {
+    margin: auto !important;
+    box-shadow: none !important;
+  }
+  .exp-entry {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+    page-break-inside: avoid;  /* For older browsers */
+  }
+
+  .lang-chip,
+  .skill-chip {
+    box-shadow: none !important;
+    border: 1.2px solid #ccc !important;
+    background: #fff !important;
+  }
+}</style>
       </head>
       <body>
-        <div id="root"><div class="container p-3 mx-auto lg:w-[960px] bg-color text-text print:max-w-full print:p-0 print:w-full print:px-6"><header><h1 class="resume-title">Pavel Botvinkin</h1><div class="contact-row"><span class="contact-location"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot contact-fa" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"></path></svg>Belgrade, Serbia</span><span class="contact-methods"><a href="https://linkedin.com/in/botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin contact-fa" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg> @<!-- -->botvinkin</a><a href="mailto:pavel@botvinkin.com" class="contact-icon"><svg data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"></path></svg> <!-- -->pavel@botvinkin.com</a><a href="https://t.me/pavel_botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="telegram" class="svg-inline--fa fa-telegram contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM371 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2 .5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3 .6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7 .5 3.2 .6 6.5 .4 9.8z"></path></svg> @<!-- -->pavel_botvinkin</a></span></div></header><div class="flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3"><div class="lg:w-2/3 print:w-[72%]"><section><h2 class="section-header">PROFESSIONAL SKILLS</h2><hr class="section-divider"/><div class="skills-chips-section"><div class="skills-chip-group"><div class="skills-chip-group-title">Architecture &amp; Leadership</div><div class="skills-chip-list"><span class="skill-chip">Scalable high-load solutions</span><span class="skill-chip">Microservices architecture</span><span class="skill-chip">Team leadership</span><span class="skill-chip">Product ownership</span><span class="skill-chip">Resource management</span><span class="skill-chip">Scrum/Agile</span></div></div><div class="skills-chip-group"><div class="skills-chip-group-title">Security &amp; Authorization</div><div class="skills-chip-list"><span class="skill-chip">ABAC</span><span class="skill-chip">RBAC</span><span class="skill-chip">ReBAC</span><span class="skill-chip">FGA</span><span class="skill-chip">Robust access control</span></div></div><div class="skills-chip-group"><div class="skills-chip-group-title">Programming</div><div class="skills-chip-list"><span class="skill-chip">Kotlin</span><span class="skill-chip">C#</span></div></div></div></section><section><h2 class="section-header">PROFESSIONAL EXPERIENCE</h2><hr class="section-divider"/><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Yandex</span><span class="exp-locdate"><span class="exp-location">Belgrade, Serbia</span><span class="exp-dates">March 2024<!-- --> — <!-- -->Present</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Head of Sector (Organization Management Services, Security Services)</em><span class="exp-role-dates"> (<!-- -->June 2024<!-- --> — <!-- -->Present<!-- -->)</span></div><div class="exp-summary">Lead a sector of more than 20 individuals across two backend development teams. Focus areas include hiring, line management, conflict resolution, people development, and performance reviews. Successfully doubled the size of the sector in one year while ensuring strategic backend development aligned with company goals. Directly manage one team and oversee internal processes, task coordination, and guide the other teams within the sector through subordinate team leaders. Serve as a Delivery Manager for several B2B security services in Yandex 360 (&gt;100M MAU, &gt;10M DAU), including authorization and group policies management. Responsible for development processes, incident management, quarterly planning, and strategic service development. Foster effective collaboration between backend developers, QA testers, and SRE teams.</div></div><div class="exp-role"><div class="exp-position"><em>Technical Architect</em><span class="exp-role-dates"> (<!-- -->March 2024<!-- --> — <!-- -->June 2024<!-- -->)</span></div><div class="exp-summary">Expanded the functionality of the authorization service to support requirements from consumer services. Led architectural landscape updates in authorization, ensuring improved integration/alignment with company objectives.</div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">EPAM Systems Inc.</span><span class="exp-locdate"><span class="exp-location">Belgrade, Serbia</span><span class="exp-dates">June 2022<!-- --> — <!-- -->March 2024</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Solution Architect</em></div><div class="exp-summary">Led the cloud reimplementation of a complex, 25-year-old monolithic authorization and license management system. Guided project from reverse-engineering to production. Defined architecture, designed infrastructure, and provided development guidance for modern scalability and performance.</div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Atos IT Solutions and Services</span><span class="exp-locdate"><span class="exp-location">Moscow, Russia</span><span class="exp-dates">November 2018<!-- --> — <!-- -->June 2022</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Solution Architect</em></div><div class="exp-summary">Reduced TCO for cloud-based solutions through architectural strategies. Led design, implementation, and support for projects in IIoT, marine, and insurance systems: industrial digitalization, system integration, hardware connectivity, data analytics.</div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">ITnent</span><span class="exp-locdate"><span class="exp-location">Volgograd, Russia</span><span class="exp-dates">November 2015<!-- --> — <!-- -->November 2018</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Software Development Team Lead</em></div><div class="exp-summary">Led development of enterprise-level software projects. Contributed to data analytics systems like ReaLog, WatchCAT, MindSphere (Siemens AG). Collaborated with CERN and international teams to deliver reliable, scalable platforms.</div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">GLONASS-Factor</span><span class="exp-locdate"><span class="exp-location">Volgograd, Russia</span><span class="exp-dates">November 2012<!-- --> — <!-- -->September 2014</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Lead Software Engineer</em></div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Empire (Private Pension Fund)</span><span class="exp-locdate"><span class="exp-location">Volgograd, Russia</span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>IT Consultant</em></div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Volgograd State Technical University</span><span class="exp-locdate"><span class="exp-location">Volgograd, Russia</span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Lecturer at the Department of Computers and Systems</em></div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">PortaCapena</span><span class="exp-locdate"><span class="exp-location">Geel, Belgium</span><span class="exp-dates">February 2010<!-- --> — <!-- -->September 2010</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Intern Software Engineer</em></div></div></div><hr class="entry-divider"/></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Part-time work experience</span><span class="exp-locdate"><span class="exp-location">Volgograd, Russia</span><span class="exp-dates">April 2008<!-- --> — <!-- -->February 2012</span></span></div><div class="exp-company-roles"><div class="exp-role"><div class="exp-position"><em>Software Engineer</em></div></div></div></div></section><section><h2 class="section-header">HIGHER EDUCATION</h2><hr class="section-divider"/><div class="edu-entry"><div class="edu-row"><span class="edu-institution">Volgograd State Technical University</span><span class="edu-dates">September 2005<!-- --> — <!-- -->March 2015</span></div><div class="edu-degrees-list"><div class="edu-degree">PhD (Candidate of Technical Sciences)<!-- --> — System analysis, management and information processing</div><div class="edu-degree">Master of Engineering and Technology</div><div class="edu-degree">Bachelor of Engineering and Technology</div><div class="edu-degree">Bachelor of Management</div></div></div></section></div><div class="lg:w-1/3 print:w-[28%]"><div class="print:space-y-2"><section><h2 class="section-header">LANGUAGES</h2><hr class="section-divider"/><ul class="lang-list"><li class="lang-item"><span class="lang-label">Russian</span><span class="lang-fluency"> — <!-- -->native</span></li><li class="lang-item"><span class="lang-label">English</span><span class="lang-fluency"> — <!-- -->fluent (C1)</span></li><li class="lang-item"><span class="lang-label">Serbian</span><span class="lang-fluency"> — <!-- -->intermediate (B1)</span></li><li class="lang-item"><span class="lang-label">German</span><span class="lang-fluency"> — <!-- -->elementary (A2)</span></li></ul></section></div></div></div></div></div>
+        <div id="root"><div class="container p-3 mx-auto lg:w-[960px] bg-color text-text print:max-w-full print:p-0 print:w-full print:px-6"><header><h1 class="resume-title">Pavel Botvinkin</h1><div class="contact-row"><span class="contact-location"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot contact-fa" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"></path></svg>Belgrade, Serbia</span><span class="contact-methods"><a href="https://linkedin.com/in/botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin contact-fa" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg> @<!-- -->botvinkin</a><a href="mailto:pavel@botvinkin.com" class="contact-icon"><svg data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"></path></svg> <!-- -->pavel@botvinkin.com</a><a href="https://t.me/pavel_botvinkin" class="contact-icon" target="_blank" rel="noopener noreferrer"><svg data-prefix="fab" data-icon="telegram" class="svg-inline--fa fa-telegram contact-fa" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM371 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2 .5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3 .6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7 .5 3.2 .6 6.5 .4 9.8z"></path></svg> @<!-- -->pavel_botvinkin</a></span></div></header><div class="flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3"><div class="lg:w-2/3 print:w-[72%]"><section><h2 class="section-header">PROFESSIONAL SKILLS</h2><hr class="section-divider"/><ul class="skills-list"><li>Cloud-native architecture and scalable systems (microservices, high-load services)</li><li>Product and service ownership with resource and process management</li><li>Enterprise security: authorization, access control, audit logs, group policies</li><li>Agile leadership (Scrum), team mentoring, and SDLC management</li><li>Programming: Kotlin, C#</li></ul></section><section><h2 class="section-header">PROFESSIONAL EXPERIENCE</h2><hr class="section-divider"/><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Yandex</span><span class="exp-location"><span>Belgrade, Serbia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Head of Sector (Organization Management and Security Services)</em></span><span class="exp-dates">June 2024<!-- --> — <!-- -->Present</span></div><div class="exp-summary">Lead a sector of more than 20 individuals across two backend development teams. Focus areas include hiring, line management, conflict resolution, people development, and performance reviews. Successfully doubled the size of the sector in one year while ensuring strategic backend development aligned with company goals. Directly manage one team and oversee internal processes, task coordination, and guide the other teams within the sector through subordinate team leaders. Serve as a Delivery Manager for several B2B security services in Yandex 360 (&gt;100M MAU, &gt;10M DAU), including authorization and group policies management. Responsible for development processes, incident management, quarterly planning, and strategic service development. Foster effective collaboration between backend developers, QA testers, and SRE teams.</div></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Technical Architect</em></span><span class="exp-dates">March 2024<!-- --> — <!-- -->June 2024</span></div><div class="exp-summary">Expanded the functionality of the authorization service to support requirements from consumer services. Led architectural landscape updates in authorization, ensuring improved integration/alignment with company objectives.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">EPAM Systems</span><span class="exp-location"><span>Belgrade, Serbia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Solution Architect</em></span><span class="exp-dates">June 2022<!-- --> — <!-- -->March 2024</span></div><div class="exp-summary">Led the cloud reimplementation of a complex, 25-year-old monolithic authorization and license management system. Guided project from reverse-engineering to production. Defined architecture, designed infrastructure, and provided development guidance for modern scalability and performance.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Atos IT Solutions and Services</span><span class="exp-location"><span>Moscow, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Solution Architect</em></span><span class="exp-dates">November 2018<!-- --> — <!-- -->June 2022</span></div><div class="exp-summary">Reduced TCO for cloud-based solutions through architectural strategies. Led design, implementation, and support for projects in IIoT, marine, and insurance systems: industrial digitalization, system integration, hardware connectivity, data analytics.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">ITnent</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Development Team Lead</em></span><span class="exp-dates">November 2015<!-- --> — <!-- -->November 2018</span></div><div class="exp-summary">Led development of enterprise-level software projects. Contributed to data analytics systems like ReaLog, WatchCAT, MindSphere (Siemens AG). Collaborated with CERN and international teams to deliver reliable, scalable platforms.</div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">GLONASS-Factor</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Lead Software Engineer</em></span><span class="exp-dates">November 2012<!-- --> — <!-- -->September 2014</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Empire (Private Pension Fund)</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Engineer, IT Consultant</em></span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Volgograd State Technical University</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Lecturer at the Department of Computers and Systems</em></span><span class="exp-dates">July 2012<!-- --> — <!-- -->August 2017</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">PortaCapena</span><span class="exp-location"><span>Geel, Belgium</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Intern Software Engineer</em></span><span class="exp-dates">February 2010<!-- --> — <!-- -->September 2010</span></div></div></div><div class="exp-entry"><div class="exp-header-row"><span class="exp-org">Part-time work experience</span><span class="exp-location"><span>Volgograd, Russia</span></span></div><div class="exp-role-block"><div class="exp-position-row"><span class="exp-position"><em>Software Engineer</em></span><span class="exp-dates">April 2008<!-- --> — <!-- -->February 2012</span></div></div></div></section><section><h2 class="section-header">HIGHER EDUCATION</h2><hr class="section-divider"/><div class="edu-entry"><div class="edu-row"><span class="edu-institution">Volgograd State Technical University</span><span class="edu-dates">September 2005<!-- --> — <!-- -->March 2015</span></div><div class="edu-degrees-list"><div class="edu-degree">PhD<!-- --> — System analysis, management and information processing</div><div class="edu-degree">Master and Bachelor of Engineering and Technology</div><div class="edu-degree">Bachelor of Management</div></div></div></section></div><div class="lg:w-1/3 print:w-[28%]"><div class="print:space-y-2"><section><h2 class="section-header">LANGUAGES</h2><hr class="section-divider"/><div class="lang-chip-list"><span class="lang-chip">Russian<span class="lang-level"> <!-- -->native (C2)</span></span><span class="lang-chip">English<span class="lang-level"> <!-- -->(C1)</span></span><span class="lang-chip">Serbian<span class="lang-level"> <!-- -->(B1)</span></span><span class="lang-chip">German<span class="lang-level"> <!-- -->(A2)</span></span></div></section></div></div></div></div></div>
       </body>
       </html>
